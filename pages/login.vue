@@ -18,9 +18,9 @@
     </div>
 
     <!-- Right Side  -->
-    <div class="flex flex-col items-center w-full">
+    <div class="flex flex-col items-center w-full lg:px-8">
       <div
-        class="flex flex-col items-center justify-center w-full max-w-[400px]"
+        class="flex flex-col items-center justify-center w-full max-w-[600px]"
       >
         <div class="flex items-center justify-center">
           <img src="/Logo.svg" alt="logo" class="h-[150px] w-auto" />
@@ -49,7 +49,7 @@
         </div>
 
         <button
-          class="w-full border-none rounded-lg py-2 text-center text-white bg-blue_button mb-4 hover:shadow-sm hover:shadow-black hover:border-none active:bg-blue_button_active"
+          class="w-full border-none rounded-lg py-2 lg:py-3 text-center text-white bg-blue_button mb-4 hover:shadow-sm hover:shadow-black hover:border-none active:bg-blue_button_active"
         >
           Continue
         </button>

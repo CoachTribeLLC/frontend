@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
+  ssr: true,
   modules: ["@nuxtjs/tailwindcss", "nuxt-vue3-google-signin"],
   css: [
     '@/assets/css/main.css',

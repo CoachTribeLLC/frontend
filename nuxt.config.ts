@@ -8,5 +8,8 @@ export default defineNuxtConfig({
   ],
   googleSignIn: {
     clientId: 'CLIENT ID OBTAINED FROM GOOGLE API CONSOLE',
+  },
+  app: {
+    baseURL: process.env.BASE_URL || '/',
   }
 })

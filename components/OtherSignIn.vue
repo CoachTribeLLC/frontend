@@ -3,7 +3,7 @@
     class="border flex items-center justify-center padding-y button-color gap-2 rounded-lg font-normal cursor-pointer button-active button-shadow min-h-10"
   >
     <div class="w-7">
-      <img :src="iconPath" alt="logo" class="w-[40px]"/>
+      <img :src="iconPath" alt="" class="w-[40px]"/>
     </div>
     {{ label }}
   </div>

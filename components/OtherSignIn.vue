@@ -1,13 +1,20 @@
 <template>
   <div
-    class="border items-center justify-center padding-y button-color px-8 rounded-lg font-normal cursor-pointer button-active button-shadow"
+    class="border flex items-center justify-center padding-y button-color gap-2 rounded-lg font-normal cursor-pointer button-active button-shadow min-h-10"
   >
-    <img src="" alt="" />
-    Label
+    <div class="w-7">
+      <img :src="iconPath" alt="logo" class="w-[40px]"/>
+    </div>
+    {{ label }}
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  label: string;
+  iconPath: string;
+}>();
+</script>
 
 <style scoped>
 .button-color {
@@ -21,16 +28,16 @@
 }
 
 .button-active:active {
-    background: hsla(0, 0%, 66%, 0.4);
-    border: 2px solid hsla(0, 0%, 66%, 0.5)
+  background: hsla(0, 0%, 66%, 0.4);
+  border: 2px solid hsla(0, 0%, 66%, 0.5);
 }
 
-.padding-y{
+.padding-y {
   padding-top: 2px;
   padding-bottom: 2px;
 }
 
-@media (min-width: 1023px)  {
+@media (min-width: 1023px) {
   .padding-y {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;

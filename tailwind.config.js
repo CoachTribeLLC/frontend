@@ -11,7 +11,8 @@ export default {
         blue_button_active: '#3C127B',
         creamsicle: '#F9A968',
         bubblegum: '#F05A8E',
-        plum: '#643695'
+        plum: '#643695',
+        white_custom: '#FAFAFA' 
       },
       fontFamily: {
         veryCursive: ["Playwrite AU NSW"]

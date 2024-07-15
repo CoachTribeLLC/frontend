@@ -1,0 +1,135 @@
+<template>
+    <div
+      class="p-container lg:p-0 flex min-h-screen items-center text-center gradient-sm"
+    >
+      <!-- Left side -->
+      <div
+        class="hidden-till-lg px-8 flex items-center justify-center bg-custom-gradient"
+      >
+        <div
+          class="text-2xl flex flex-col shadow-md py-10 px-6 quote-text-color rounded-3xl border bg-white bg-opacity-30"
+        >
+          <img src="/open-quotes.svg" class="h-5 w-5 self-start" />
+          <p class="font-veryCursive">
+            {{ quotes[Math.floor(Math.random() * quotes.length)] }}
+          </p>
+          <img src="/close-quotes.svg" class="h-5 w-5 self-end" />
+        </div>
+      </div>
+  
+      <!-- Right Side  -->
+      <div class="flex flex-col items-center w-full lg:px-8">
+        <div
+          class="flex flex-col items-center justify-center w-full max-w-[600px]"
+        >
+          <div class="flex items-center justify-center">
+            <img src="/Logo.svg" alt="logo" class="h-[150px] w-auto" />
+          </div>
+          <form class="w-full text-[#292929]">
+            <h1 class="font-medium text-2xl tracking-widest mb-4 leading-8">
+              Welcome
+            </h1>
+  
+            <div class="flex-col lg:flex lg:flex-row  justify-between items-center w-full gap-x-10">
+              <CustomTextField
+              placeholder="Enter your first name"
+              label="First name"
+              type="text"
+              class="text-left"
+            />
+  
+            <CustomTextField
+              placeholder="Enter your last name"
+              label="Last name"
+              type="text"
+              class="text-left"
+            />
+            </div>
+  
+            <CustomTextField
+              placeholder="Ex. hello@gmail.com"
+              label="Email"
+              type="email"
+              class="text-left"
+            />
+    
+            <CustomTextField
+              placeholder="Enter your password"
+              label="Password"
+              type="password"
+              class="text-left"
+              rightIcon="/open-eye.svg"
+            />
+    
+            <div class="w-full text-left mb-5">
+              By creating an account you agree to Coach Tribes <span class="underline cursor-pointer">Conditions of Use</span> and <span class="underline cursor-pointer">Privacy Policy</span>
+            </div>
+            <button
+              class="w-full border-none rounded-3xl py-2 lg:py-3 text-center text-white bg-blue_button mb-4 hover:shadow-sm hover:shadow-black hover:border-none active:bg-blue_button_active"
+            >
+              Create Account
+            </button>
+    
+            <p class="text-center font-light">or sign up with</p>
+            <div class="flex items-center justify-center gap-x-4 my-4 w-full">
+              <OtherSignIn class="w-1/2 rounded-2xl" label="Google" iconPath="/googlelogo.svg"/>
+              <OtherSignIn class="w-1/2 rounded-2xl" label="Linkedin" iconPath="/googlelogo.svg"/>
+            </div>
+          </form>
+          
+          <p class="font-light">
+            Already have an account?
+            <span class="font-normal cursor-pointer hover:underline">Log in</span>
+          </p>
+        </div>
+        <footer>
+          <p class="font-light text-center text-xs mt-8">
+            {{ year }}<span> &copy;</span>Coach Tribe. All rights reserved
+          </p>
+        </footer>
+      </div>
+    </div>
+  </template>
+  
+  <script setup lang="ts">
+  const year = new Date().getUTCFullYear();
+  import {quotes} from '@/quotes.js';
+  </script>
+  
+  <style scoped>
+  .hidden-till-lg {
+    display: none;
+  }
+  
+  .input-display{
+      display: flex;
+      flex-direction: column;
+    }
+  @media (min-width: 1023px) {
+    /* Styles for screens smaller than the lg breakpoint (max-width 1023px) */
+    .hidden-till-lg {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    .input-display {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 1023px) {
+    .gradient-sm {
+      background: linear-gradient(to bottom, white 80%, #ffcc99 100%);
+    }
+  }
+  
+  .quote-text-color {
+    color: hsla(269, 47%, 40%, 0.7);
+  }
+  
+  .bg-custom-gradient {
+    background: repeating-linear-gradient(135deg, rgba(240, 90, 142, 0.8) 0%, rgba(249,169,104) 30%, rgba(200,200,200, 0.5) 80%, rgba(100,54,149, 0.9) 100%);
+  }
+  </style
+  

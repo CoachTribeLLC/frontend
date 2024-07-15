@@ -25,43 +25,45 @@
         <div class="flex items-center justify-center">
           <img src="/Logo.svg" alt="logo" class="h-[150px] w-auto" />
         </div>
-        <h1 class="font-medium text-2xl tracking-widest mb-4 leading-8">
-          Welcome Back
-        </h1>
-
-        <CustomTextField
-          placeholder="Ex. hello@gmail.com"
-          label="Email"
-          type="email"
-          class="text-left"
-        />
-
-        <CustomTextField
-          placeholder="Enter your password"
-          label="Password"
-          type="password"
-          class="text-left"
-          rightIcon="/open-eye.svg"
-        />
-
-        <div class="w-full text-right underline cursor-pointer mb-5">
-          Forgot Password
-        </div>
-
-        <button
-          class="w-full border-none rounded-lg py-2 lg:py-3 text-center text-white bg-blue_button mb-4 hover:shadow-sm hover:shadow-black hover:border-none active:bg-blue_button_active"
-        >
-          Continue
-        </button>
-
-        <p class="text-center font-light">or continue with</p>
-        <div class="flex items-center justify-center gap-x-4 my-4 w-full">
-          <OtherSignIn class="w-1/2" />
-          <OtherSignIn class="w-1/2" />
-        </div>
+        <form class="text-[#292929] w-full">
+          <h1 class="font-medium text-2xl tracking-widest mb-4 leading-8">
+            Welcome Back
+          </h1>
+  
+          <CustomTextField
+            placeholder="Ex. hello@gmail.com"
+            label="Email"
+            type="email"
+            class="text-left"
+          />
+  
+          <CustomTextField
+            placeholder="Enter your password"
+            label="Password"
+            type="password"
+            class="text-left"
+            rightIcon="/open-eye.svg"
+          />
+          <div class="w-full text-right hover:underline cursor-pointer mb-5">
+            Forgot Password
+          </div>
+  
+          <button
+            class="w-full border-none rounded-lg py-2 lg:py-3 text-center text-white bg-blue_button mb-4 hover:shadow-sm hover:shadow-black hover:border-none active:bg-blue_button_active"
+          >
+            Continue
+          </button>
+  
+          <p class="text-center font-light">or continue with</p>
+          <div class="flex items-center justify-center gap-x-4 my-4 w-full">
+            <OtherSignIn class="w-1/2" label="Google" iconPath="/googlelogo.svg"/>
+            <OtherSignIn class="w-1/2" label="Linkedin" iconPath="/googlelogo.svg"/>
+          </div>
+        </form>
+        
         <p class="font-light">
           New to Coach Tribe?
-          <span class="font-normal cursor-pointer">Sign Up</span>
+          <span class="font-normal cursor-pointer hover:underline">Sign Up</span>
         </p>
       </div>
       <footer>
@@ -75,11 +77,7 @@
 
 <script setup lang="ts">
 const year = new Date().getUTCFullYear();
-
-//list of Quotes
-const quotes: string[] = [
-  "You have every tool you need to create the life you want.",
-];
+import {quotes} from '@/quotes.js';
 </script>
 
 <style scoped>
